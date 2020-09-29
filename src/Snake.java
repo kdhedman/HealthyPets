@@ -28,7 +28,7 @@ public class Snake extends Animal{
      */
     @Override
     public String feedInfo() {
-        return String.format("%s:\nTyp: Ormpellets.\nMängd: %.0fg.",
+        return String.format("%s:\nTyp: Ormpellets. \nMängd: %.0fg.",
                 this.getName(), foodFormula());
     }
 }
