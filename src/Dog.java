@@ -3,7 +3,8 @@
  * Date: 2020-09-28 <br>
  * Time: 18:46 <br>
  * Project: HealthyPets <br>
- * Copyright: Nackademin <br>
+ * Copyright: Nackademin <br> <br>
+ *     Dog, subclass of Animal.
  */
 public class Dog extends Animal  {
 

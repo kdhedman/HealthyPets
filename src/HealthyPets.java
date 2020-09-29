@@ -20,13 +20,7 @@ public class HealthyPets {
 
 
     public static void main(String[] args) {
-        //Dog sixten = new Dog("Sixten", 5000);
-//        Dog dogge = new Dog("Dogge", 10000);
-//        Cat venus = new Cat("Venus", 5000);
-//        Cat ove = new Cat("Ove", 3000);
-//        Snake hypno = new Snake("Hypno", 1000);
-
-        //en polymorfisk lista med djuren.
+        //en polymorfisk lista med djur.
         List<Animal> animalList = new LinkedList<>();
         animalList.add(new Dog("Sixten", 5000));
         animalList.add(new Dog("Dogge", 10000));
@@ -39,17 +33,13 @@ public class HealthyPets {
 
             int choice = -1;
             try{
-                String s = JOptionPane.showInputDialog("Vilket djur vill du mata?");
+                String s = JOptionPane.showInputDialog(null, "Vilket djur vill du mata?", "HealthyPets", JOptionPane.QUESTION_MESSAGE);
                 if(s == null)
                     break;
                 //Sätter choice till indexvärdet av passande enum-objekt.
-                choice = Animals.valueOf(s.toUpperCase()).ordinal();
+                choice = Animals.valueOf(s.toUpperCase().trim()).ordinal();
             } catch (Exception e){
-                JOptionPane.showMessageDialog(null,
-                        "Error: " + e +
-                        "\nFörsök igen!",
-                        "Error",
-                        JOptionPane.ERROR_MESSAGE);
+                errorDialog(e.getMessage());
                 continue;
             }
 
@@ -63,8 +53,19 @@ public class HealthyPets {
         }
     }
 
+    public static void errorDialog(String message){
+        JOptionPane.showMessageDialog(null,
+                "Error: " + message+
+                        "\nFörsök igen!",
+                "HealthyPets",
+                JOptionPane.ERROR_MESSAGE);
+    }
+
     public static void infoDialog(String message){
-        JOptionPane.showMessageDialog(null, message, "HealthyPets", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(null,
+                message,
+                "HealthyPets",
+                JOptionPane.INFORMATION_MESSAGE);
     }
 
 }

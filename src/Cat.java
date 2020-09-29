@@ -3,7 +3,8 @@
  * Date: 2020-09-28 <br>
  * Time: 19:11 <br>
  * Project: HealthyPets <br>
- * Copyright: Nackademin <br>
+ * Copyright: Nackademin <br> <br>
+ *     Cat, subclass of Animal.
  */
 public class Cat extends Animal{
 

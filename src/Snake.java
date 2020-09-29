@@ -3,7 +3,8 @@
  * Date: 2020-09-28 <br>
  * Time: 19:44 <br>
  * Project: HealthyPets <br>
- * Copyright: Nackademin <br>
+ * Copyright: Nackademin <br> <br>
+ *     Snake, subclass of Animal.
  */
 public class Snake extends Animal{
 
