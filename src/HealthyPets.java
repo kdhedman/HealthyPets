@@ -33,7 +33,7 @@ public class HealthyPets {
 
             int choice = -1;
             try{
-                String s = JOptionPane.showInputDialog(null, "Vilket djur vill du mata?", "HealthyPets", JOptionPane.QUESTION_MESSAGE);
+                String s = inputDialog("Vilket djur vill du mata?");
                 if(s == null)
                     break;
                 //Sätter choice till indexvärdet av passande enum-objekt.
@@ -45,12 +45,19 @@ public class HealthyPets {
 
             infoDialog(animalList.get(choice).feedInfo());
 
-            choice = JOptionPane.showConfirmDialog(null,"Mata ett djur till?", "HealthyPets", JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
+            choice = yesNoDialog("Mata ett djur till?");
             if(choice == 0){
                 continue;
             }
             break;
         }
+    }
+
+    public static String inputDialog(String message){
+        return JOptionPane.showInputDialog(null,
+                message,
+                "HealthyPets",
+                JOptionPane.QUESTION_MESSAGE);
     }
 
     public static void errorDialog(String message){
@@ -66,6 +73,14 @@ public class HealthyPets {
                 message,
                 "HealthyPets",
                 JOptionPane.INFORMATION_MESSAGE);
+    }
+
+    public static int yesNoDialog(String message){
+        return JOptionPane.showConfirmDialog(null,
+                message,
+                "HealthyPets",
+                JOptionPane.YES_NO_OPTION,
+                JOptionPane.QUESTION_MESSAGE);
     }
 
 }

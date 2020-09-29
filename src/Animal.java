@@ -11,7 +11,7 @@ public abstract class Animal implements IFoodInfo{
     private double weight;
 
     /**
-     * Only constructor.
+     * String name, double weight.
      * @param name String
      * @param weight double
      */

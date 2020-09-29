@@ -28,7 +28,7 @@ public class Cat extends Animal{
      */
     @Override
     public String feedInfo() {
-        return String.format("%s:\nTyp Kattfoder.\nMängd: %.0fg.",
+        return String.format("%s:\nTyp: Kattfoder.\nMängd: %.0fg.",
                 this.getName(), foodFormula());
     }
 }
