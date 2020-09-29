@@ -18,7 +18,6 @@ public class HealthyPets {
         }
     }
 
-
     public static void main(String[] args) {
         //en polymorfisk lista med djur.
         List<Animal> animalList = new LinkedList<>();
@@ -30,7 +29,6 @@ public class HealthyPets {
 
         //mainloop
         while(true){
-
             int choice = -1;
             try{
                 String s = inputDialog("Vilket djur vill du mata?");

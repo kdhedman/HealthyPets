@@ -12,7 +12,6 @@ public class Snake extends Animal{
         super(name, weight);
     }
 
-
     /**
      * Returns how much food a Snake needs.
      * Snake always eats 20g pellets.

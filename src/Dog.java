@@ -12,7 +12,6 @@ public class Dog extends Animal  {
         super(name, weight);
     }
 
-
     /**
      * Returns how much food a dog needs.
      * Dog weight(in grams) / 100.
