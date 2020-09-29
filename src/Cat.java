@@ -5,7 +5,7 @@
  * Project: HealthyPets <br>
  * Copyright: Nackademin <br>
  */
-public class Cat extends Animal implements IFoodInfo{
+public class Cat extends Animal{
 
     public Cat(String name, int weight){
         super(name,weight);
@@ -21,9 +21,13 @@ public class Cat extends Animal implements IFoodInfo{
         return this.getWeight() / 150;
     }
 
+    /**
+     * Returns string formatted string with feeding information.
+     * @return String formatted.
+     */
     @Override
     public String feedInfo() {
-        return String.format("1 Portion till %s består av %.0fg kattfoder.",
-                this.getName(), this.foodFormula());
+        return String.format("%s:\nTyp Kattfoder.\nMängd: %.0fg.",
+                this.getName(), foodFormula());
     }
 }

@@ -5,8 +5,7 @@
  * Project: HealthyPets <br>
  * Copyright: Nackademin <br>
  */
-public class Dog extends Animal implements IFoodInfo {
-    String type = "Dog";
+public class Dog extends Animal  {
 
     public Dog(String name, double weight){
         super(name, weight);
@@ -23,11 +22,14 @@ public class Dog extends Animal implements IFoodInfo {
         return this.getWeight() / 100;
     }
 
-    //TODO FIXA
+    /**
+     * Returns string formatted string with feeding information.
+     * @return String formatted.
+     */
     @Override
     public String feedInfo() {
-        return this.getName() + ":\n" +
-                "Typ: Hundfoder. \tMängd: " + foodFormula() + "g.\n";
+        return String.format("%s:\nTyp Hundfoder.\nMängd: %.0fg.",
+                this.getName(), foodFormula());
     }
 
 
