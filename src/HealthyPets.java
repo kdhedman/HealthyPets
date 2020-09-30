@@ -31,7 +31,7 @@ public class HealthyPets {
         while(true){
             int choice = -1;
             try{
-                String s = inputDialog("Vilket djur vill du mata?");
+                String s = inputDialog("Vilket djur ska få mat?");
                 if(s == null)
                     break;
                 //Sätter choice till indexvärdet av passande enum-objekt.
